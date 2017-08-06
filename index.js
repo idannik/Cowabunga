@@ -14,6 +14,10 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
